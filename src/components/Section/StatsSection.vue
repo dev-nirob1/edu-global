@@ -2,29 +2,12 @@
   <section class="stats-section">
     <div class="container">
       <div class="stats-grid">
-        <!-- Stat Item 1 -->
-        <div class="stat-item">
-          <h3 class="stat-number">10K+</h3>
-          <p class="stat-label">Students Placed</p>
-        </div>
-
-        <!-- Stat Item 2 -->
-        <div class="stat-item">
-          <h3 class="stat-number">98%</h3>
-          <p class="stat-label">Visa Success Rate</p>
-        </div>
-
-        <!-- Stat Item 3 -->
-        <div class="stat-item">
-          <h3 class="stat-number">120+</h3>
-          <p class="stat-label">Partner Universities</p>
-        </div>
-
-        <!-- Stat Item 4 -->
-        <div class="stat-item">
-          <h3 class="stat-number">15+</h3>
-          <p class="stat-label">Global Destinations</p>
-        </div>
+        <StatItem
+          v-for="(stat, index) in stats"
+          :key="index"
+          :value="stat.value"
+          :label="stat.label"
+        />
       </div>
     </div>
     
@@ -33,6 +16,17 @@
     <div class="bg-shape shape-right"></div>
   </section>
 </template>
+
+<script setup>
+import StatItem from '@/components/Widget/StatItem.vue'
+
+const stats = [
+  { value: '10K+', label: 'Students Placed' },
+  { value: '98%', label: 'Visa Success Rate' },
+  { value: '120+', label: 'Partner Universities' },
+  { value: '15+', label: 'Global Destinations' }
+]
+</script>
 
 <style scoped>
 .stats-section {
@@ -49,48 +43,6 @@
   position: relative;
   z-index: 2;
   text-align: center;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  position: relative;
-}
-
-/* Add a line separator between items on desktop */
-.stat-item:not(:last-child)::after {
-  content: none;
-}
-
-@media (min-width: 768px) {
-  .stat-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -1.5rem;
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-}
-
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--text-light);
-  line-height: 1;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.stat-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-primary-light);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
 }
 
 /* Decorative Shapes */
@@ -120,14 +72,6 @@
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
-  }
-  
-  .stat-number {
-    font-size: 4rem;
-  }
-
-  .stat-label {
-    font-size: 1rem;
   }
 }
 </style>
