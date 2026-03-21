@@ -11,6 +11,16 @@ export const homeRoutes = [
         name: 'home',
         component: HomePage,
       },
+      {
+        path: 'destinations',
+        name: 'destinations',
+        component: () => import('../Pages/DestinationsPage.vue'),
+      },
+      {
+        path: 'services',
+        name: 'services',
+        component: () => import('../Pages/ServicesPage.vue'),
+      },
     ],
   },
 ]
