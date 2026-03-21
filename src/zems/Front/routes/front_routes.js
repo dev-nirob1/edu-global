@@ -21,6 +21,11 @@ export const homeRoutes = [
         name: 'services',
         component: () => import('../Pages/ServicesPage.vue'),
       },
+      {
+        path: 'destinations/:id',
+        name: 'destination-details',
+        component: () => import('../Pages/DestinationDetailsPage.vue'),
+      },
     ],
   },
 ]
