@@ -3,12 +3,10 @@
     <div class="container footer-container">
       <!-- Brand & Description -->
       <div class="footer-brand">
-        <router-link to="/" class="logo">
-          Edu<span>Global</span>
-        </router-link>
+        <router-link to="/" class="logo"> Edu<span>Global</span> </router-link>
         <p class="footer-desc">
-          Your trusted partner in shaping international academic careers.
-          We provide end-to-end guidance for studying abroad.
+          Your trusted partner in shaping international academic careers. We provide end-to-end
+          guidance for studying abroad.
         </p>
         <div class="social-links">
           <a href="#" class="social-icon" aria-label="Facebook">FB</a>
@@ -146,7 +144,9 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-links a {
   color: var(--color-primary-light);
   opacity: 0.8;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .footer-links a:hover {
