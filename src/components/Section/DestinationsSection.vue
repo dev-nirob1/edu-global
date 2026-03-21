@@ -1,17 +1,13 @@
 <template>
   <section class="destinations-section">
     <div class="container">
-      <div class="section-header">
-        <div class="header-text">
-          <h2 class="section-title">Popular <span class="highlight">Destinations</span></h2>
-          <p class="section-subtitle">
-            Explore world-class education systems and find the perfect country to launch your massive career trajectory.
-          </p>
-        </div>
-        <router-link to="/destinations" class="btn btn-outline view-all-btn">
-          View All Destinations <span class="arrow">→</span>
-        </router-link>
-      </div>
+      <SectionHeader
+        title="Popular"
+        highlight="Destinations"
+        subtitle="Explore world-class education systems and find the perfect country to launch your massive career trajectory."
+        buttonText="View All Destinations"
+        buttonLink="/destinations"
+      />
 
       <div class="destinations-grid">
         <!-- Destination Card 1 -->
@@ -99,42 +95,13 @@
 </template>
 
 <script setup>
-// Destinations visual component logic empty for now
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
 </script>
 
 <style scoped>
 .destinations-section {
   padding: var(--spacing-2xl) 0;
   background-color: var(--bg-offset);
-}
-
-.section-header {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: var(--spacing-xl);
-}
-
-.header-text {
-  max-width: 600px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--text-main);
-  letter-spacing: -0.5px;
-}
-
-.highlight {
-  color: var(--color-primary);
-}
-
-.section-subtitle {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-  line-height: 1.6;
 }
 
 .destinations-grid {
@@ -147,11 +114,13 @@
 .destination-card {
   display: block;
   background-color: var(--bg-surface);
-  border-radius: var(--border-radius-lg);
+  border-radius: var(--border-radius-md);
   overflow: hidden;
   text-decoration: none;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .destination-card:hover {
@@ -182,7 +151,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(15, 23, 42, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(15, 23, 42, 0.6) 100%);
   z-index: 1;
 }
 
@@ -206,11 +175,11 @@
   border-radius: var(--border-radius-full);
   font-size: 0.75rem;
   font-weight: 600;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .card-content {
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   background-color: var(--bg-surface);
   z-index: 2;
@@ -257,27 +226,8 @@
   transform: translateX(6px);
 }
 
-.arrow {
-  transition: transform 0.2s ease;
-}
-
-.view-all-btn:hover .arrow {
-  transform: translateX(4px);
-}
-
 /* Breakpoints */
 @media (min-width: 768px) {
-  .section-header {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  
-  .view-all-btn {
-    flex-shrink: 0;
-    margin-bottom: 0.5rem;
-  }
-
   .destinations-grid {
     grid-template-columns: repeat(2, 1fr);
   }
