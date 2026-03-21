@@ -22,6 +22,11 @@ export const homeRoutes = [
         component: () => import('../Pages/ServicesPage.vue'),
       },
       {
+        path: 'contact',
+        name: 'contact',
+        component: () => import('../Pages/ContactPage.vue'),
+      },
+      {
         path: 'destinations/:id',
         name: 'destination-details',
         component: () => import('../Pages/DestinationDetailsPage.vue'),

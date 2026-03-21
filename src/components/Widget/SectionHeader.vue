@@ -19,6 +19,10 @@ defineProps({
   buttonLink: {
     type: String,
     default: ''
+  },
+  isPageTitle: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -26,9 +30,9 @@ defineProps({
 <template>
   <div class="section-header">
     <div class="header-text">
-      <h2 class="section-title">
+      <component :is="isPageTitle ? 'h1' : 'h2'" class="section-title">
         {{ title }} <span v-if="highlight" class="highlight">{{ highlight }}</span>
-      </h2>
+      </component>
       <p v-if="subtitle" class="section-subtitle">
         {{ subtitle }}
       </p>

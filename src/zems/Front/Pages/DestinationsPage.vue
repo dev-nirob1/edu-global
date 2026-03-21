@@ -1,9 +1,13 @@
 <template>
   <div class="destinations-page">
     <div class="page-header">
-      <div class="container text-center">
-        <h1 class="page-title">Explore Global <span class="highlight">Destinations</span></h1>
-        <p class="page-subtitle">Filter and discover the best countries to advance your academic career.</p>
+      <div class="container header-center">
+        <SectionHeader 
+          title="Explore Global" 
+          highlight="Destinations"
+          subtitle="Filter and discover the best countries to advance your academic career."
+          isPageTitle
+        />
       </div>
     </div>
 
@@ -72,6 +76,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import DestinationCard from '@/components/Widget/DestinationCard.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
 
 // Basic lists for UI
 const regions = ['North America', 'Europe', 'Oceania', 'Asia']
@@ -214,14 +219,19 @@ const resetFilters = () => {
   letter-spacing: -1px;
 }
 
-.highlight {
-  color: var(--color-primary);
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.page-subtitle {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  max-width: 600px;
+.header-center :deep(.section-header) {
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.header-center :deep(.header-text) {
   margin: 0 auto;
 }
 
