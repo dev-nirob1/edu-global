@@ -1,54 +1,74 @@
 <template>
   <section class="hero-section">
     <div class="container hero-container">
-      
       <!-- Left Content -->
       <div class="hero-content">
         <h1 class="hero-title">
-          Study Abroad Without the 
+          Study Abroad Without the
           <span class="highlight">Stress.</span>
         </h1>
         <p class="hero-subtitle">
-          Join thousands of students who have trusted EduGlobal to find their dream university, secure their visa, and land safely in their new home.
+          Join thousands of students who have trusted EduGlobal to find their dream university,
+          secure their visa, and land safely in their new home.
         </p>
-        
+
         <div class="hero-actions">
-          <router-link to="/destinations" class="btn btn-primary btn-large">Find a Program</router-link>
+          <router-link to="/destinations" class="btn btn-primary btn-large"
+            >Start Your Journey</router-link
+          >
           <router-link to="/contact" class="btn btn-outline btn-large gap-icon">
             Talk to an Expert <span class="arrow">→</span>
           </router-link>
         </div>
-        
+
         <!-- Social Proof -->
         <div class="social-proof">
           <div class="avatars">
-            <div class="avatar" style="background-color: var(--color-accent);"></div>
-            <div class="avatar" style="background-color: var(--color-secondary);"></div>
-            <div class="avatar" style="background-color: var(--color-primary-light);"></div>
-            <div class="avatar" style="background-color: var(--color-primary);"></div>
+            <img
+              class="avatar"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop"
+              alt="Student"
+            />
+            <img
+              class="avatar"
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop"
+              alt="Student"
+            />
+            <img
+              class="avatar"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop"
+              alt="Student"
+            />
+            <img
+              class="avatar"
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop"
+              alt="Student"
+            />
           </div>
-          <p class="trusted-text">
-            <strong>10,000+</strong> students globally.
-          </p>
+          <p class="trusted-text"><strong>10,000+</strong> students globally.</p>
         </div>
       </div>
 
       <!-- Right Visuals -->
       <div class="hero-visuals">
         <div class="image-wrapper">
-          <img src="/hero-image.png" alt="Diverse university students studying" class="main-image" />
-          
+          <img
+            src="/hero-image.png"
+            alt="Diverse university students studying"
+            class="main-image"
+          />
+
           <!-- Floating notification badges -->
           <div class="floating-badge badge-top">
-            <div class="badge-icon">🎓</div>
+            <div class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></div>
             <div class="badge-text">
               <strong>98%</strong>
               <span>Visa Success</span>
             </div>
           </div>
-          
+
           <div class="floating-badge badge-bottom">
-            <div class="badge-icon">🌍</div>
+            <div class="badge-icon"><i class="fa-solid fa-globe"></i></div>
             <div class="badge-text">
               <strong>15+</strong>
               <span>Destinations</span>
@@ -56,7 +76,6 @@
           </div>
         </div>
       </div>
-      
     </div>
   </section>
 </template>
@@ -144,7 +163,9 @@
 .btn-outline:hover .arrow {
   transform: translateX(4px);
 }
-
+.btn-primary:hover {
+  color: var(--bg-surface);
+}
 /* Social Proof */
 .social-proof {
   display: flex;
@@ -163,6 +184,7 @@
   border: 3px solid var(--bg-surface);
   margin-left: -12px;
   box-shadow: var(--shadow-sm);
+  object-fit: cover;
 }
 
 .avatar:first-child {
@@ -269,9 +291,15 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Responsive Breakpoints */
@@ -285,7 +313,7 @@
   .hero-container {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .hero-title {
     font-size: 4rem;
   }

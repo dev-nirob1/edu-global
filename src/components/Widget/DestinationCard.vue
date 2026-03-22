@@ -41,7 +41,7 @@ defineProps({
       <p class="univ-count">{{ univCount }}</p>
       <div class="explore-row">
         <span class="explore-text">Explore Programs</span>
-        <span class="explore-icon">→</span>
+        <span class="explore-icon"><i class="fa-solid fa-arrow-right"></i></span>
       </div>
     </div>
   </router-link>
@@ -144,7 +144,7 @@ defineProps({
 .explore-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.5rem;
   color: var(--color-primary);
   font-weight: 600;
 }

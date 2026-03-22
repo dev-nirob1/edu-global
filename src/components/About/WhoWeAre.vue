@@ -34,7 +34,7 @@
             class="story-image"
           />
           <div class="floating-badge">
-            <span class="badge-icon">🌟</span>
+            <i class="fa-solid fa-star badge-icon" style="color: var(--color-secondary);"></i>
             <div>
               <strong>Top Rated</strong>
               <p>By 500+ Students</p>

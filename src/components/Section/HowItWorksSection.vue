@@ -30,37 +30,37 @@ import StepCard from '@/components/Widget/StepCard.vue'
 const steps = [
   {
     number: '01',
-    icon: '💬',
+    icon: '<i class="fa-regular fa-comments"></i>',
     title: 'Free Consultation',
     description: 'Speak with our expert counselors to discuss your goals, academic background, and budget to find the perfect path.'
   },
   {
     number: '02',
-    icon: '🎓',
+    icon: '<i class="fa-solid fa-graduation-cap"></i>',
     title: 'Program Selection',
     description: 'We help you shortlist top universities and submit your applications with highly optimized statements of purpose.'
   },
   {
     number: '03',
-    icon: '✈️',
+    icon: '<i class="fa-solid fa-plane"></i>',
     title: 'Visa Assistance',
     description: 'Receive end-to-end guidance on visa documentation, interview preparation, and financial structuring.'
   },
   {
     number: '04',
-    icon: '🎒',
+    icon: '<i class="fa-solid fa-suitcase"></i>',
     title: 'Pre-Departure',
     description: 'Get assistance with accommodation, flights, and everything you need to know before landing in your new country.'
   },
   {
     number: '05',
-    icon: '🌍',
+    icon: '<i class="fa-solid fa-earth-americas"></i>',
     title: 'Arrival & Settling In',
     description: 'Touch down safely with airport pickup options, orientation events, and ongoing support from our local networks.'
   },
   {
     number: '06',
-    icon: '🚀',
+    icon: '<i class="fa-solid fa-rocket"></i>',
     title: 'Ongoing Support',
     description: 'We stay connected throughout your studies, assisting with visas, post-study work rights, and permanent residency options.'
   }

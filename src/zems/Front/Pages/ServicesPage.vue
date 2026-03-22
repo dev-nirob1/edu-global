@@ -11,6 +11,7 @@
           />
         </div>
         <div class="service-content-col">
+          <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <h2 class="service-title">University Admissions</h2>
           <p class="service-desc">
             Navigating global university applications can be overwhelming. Our seasoned admission
@@ -19,10 +20,10 @@
             applications.
           </p>
           <ul class="service-features">
-            <li><i class="check-icon">✓</i> Strategic Profile Assessment</li>
-            <li><i class="check-icon">✓</i> Shortlisting Best-Fit Institutions</li>
-            <li><i class="check-icon">✓</i> SOP and Essay Editing</li>
-            <li><i class="check-icon">✓</i> Direct Application Tracking</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Strategic Profile Assessment</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Shortlisting Best-Fit Institutions</li>
+            <li><i class="fa-solid fa-check check-icon"></i> SOP and Essay Editing</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Direct Application Tracking</li>
           </ul>
         </div>
       </div>
@@ -37,6 +38,7 @@
           />
         </div>
         <div class="service-content-col">
+          <div class="service-icon"><i class="fa-solid fa-earth-americas"></i></div>
           <h2 class="service-title">Visa Guidance & Processing</h2>
           <p class="service-desc">
             A single mistake can derail your study abroad dream. Our dedicated visa specialists are
@@ -44,10 +46,10 @@
             regulations for seamless approvals to the USA, UK, Canada, and Australia.
           </p>
           <ul class="service-features">
-            <li><i class="check-icon">✓</i> Complex Document Preparation</li>
-            <li><i class="check-icon">✓</i> Financial File Assessment</li>
-            <li><i class="check-icon">✓</i> Confidence-Building Mock Interviews</li>
-            <li><i class="check-icon">✓</i> Embassy Appointment Scheduling</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Complex Document Preparation</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Financial File Assessment</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Confidence-Building Mock Interviews</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Embassy Appointment Scheduling</li>
           </ul>
         </div>
       </div>
@@ -61,15 +63,16 @@
           />
         </div>
         <div class="service-content-col">
+          <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
           <h2 class="service-title">Scholarship Assistance</h2>
           <p class="service-desc">
             Quality education should be accessible. Our financial advisors are experts at identifying and securing partial to fully-funded international scholarships, grants, and university-specific bursaries to drastically reduce your tuition burden.
           </p>
           <ul class="service-features">
-            <li><i class="check-icon">✓</i> Global Scholarship Database Matching</li>
-            <li><i class="check-icon">✓</i> Grant Application Storytelling</li>
-            <li><i class="check-icon">✓</i> Financial Aid Negotiation</li>
-            <li><i class="check-icon">✓</i> Corporate Sponsorship Guidance</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Global Scholarship Database Matching</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Grant Application Storytelling</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Financial Aid Negotiation</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Corporate Sponsorship Guidance</li>
           </ul>
         </div>
       </div>
@@ -84,15 +87,16 @@
           />
         </div>
         <div class="service-content-col">
+          <div class="service-icon"><i class="fa-solid fa-plane-departure"></i></div>
           <h2 class="service-title">Pre-Departure & Accommodation</h2>
           <p class="service-desc">
             Your journey doesn't end with a visa. We provide comprehensive pre-departure briefings covering cultural adjustments, packing essentials, and banking. Additionally, we help secure safe and comfortable student housing near your chosen campus.
           </p>
           <ul class="service-features">
-            <li><i class="check-icon">✓</i> On-Campus & Off-Campus Housing</li>
-            <li><i class="check-icon">✓</i> Flight Booking Assistance</li>
-            <li><i class="check-icon">✓</i> Cultural Orientation Sessions</li>
-            <li><i class="check-icon">✓</i> Airport Pickup Coordination</li>
+            <li><i class="fa-solid fa-check check-icon"></i> On-Campus & Off-Campus Housing</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Flight Booking Assistance</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Cultural Orientation Sessions</li>
+            <li><i class="fa-solid fa-check check-icon"></i> Airport Pickup Coordination</li>
           </ul>
         </div>
       </div>

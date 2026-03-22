@@ -9,12 +9,12 @@ defineProps({
 
 <template>
   <div class="service-card">
-    <div class="service-icon">{{ icon }}</div>
+    <div class="service-icon" v-html="icon"></div>
     <h3 class="service-title">{{ title }}</h3>
     <p class="service-desc">{{ description }}</p>
     <ul class="service-features" v-if="features && features.length > 0">
       <li v-for="(feat, index) in features" :key="index">
-        <span class="check">✓</span> {{ feat }}
+        <i class="fa-solid fa-check check"></i> {{ feat }}
       </li>
     </ul>
     <router-link to="/contact" class="btn btn-outline w-100 mt-auto">Get Started</router-link>

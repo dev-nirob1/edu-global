@@ -10,7 +10,7 @@ defineProps({
 <template>
   <div class="step-card">
     <div class="step-number">{{ number }}</div>
-    <div class="step-icon">{{ icon }}</div>
+    <div class="step-icon" v-html="icon"></div>
     <h3 class="step-title">{{ title }}</h3>
     <p class="step-desc">{{ description }}</p>
   </div>

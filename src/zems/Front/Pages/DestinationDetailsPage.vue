@@ -16,28 +16,28 @@
       <div class="container">
         <div class="facts-grid">
           <div class="fact-item">
-            <span class="fact-icon">🏛️</span>
+            <span class="fact-icon"><i class="fa-solid fa-building-columns"></i></span>
             <div class="fact-text">
               <strong>Capital</strong>
               <span>{{ country.facts.capital }}</span>
             </div>
           </div>
           <div class="fact-item">
-            <span class="fact-icon">💱</span>
+            <span class="fact-icon"><i class="fa-solid fa-money-bill-wave"></i></span>
             <div class="fact-text">
               <strong>Currency</strong>
               <span>{{ country.facts.currency }}</span>
             </div>
           </div>
           <div class="fact-item">
-            <span class="fact-icon">🗣️</span>
+            <span class="fact-icon"><i class="fa-solid fa-language"></i></span>
             <div class="fact-text">
               <strong>Language</strong>
               <span>{{ country.facts.language }}</span>
             </div>
           </div>
           <div class="fact-item">
-            <span class="fact-icon">📅</span>
+            <span class="fact-icon"><i class="fa-solid fa-calendar-days"></i></span>
             <div class="fact-text">
               <strong>Intakes</strong>
               <span>{{ country.facts.intake }}</span>
@@ -55,7 +55,7 @@
           <h2>Why Study in {{ country.name }}?</h2>
           <div class="reasons-list">
             <div class="reason-card" v-for="(reason, index) in country.reasons" :key="index">
-              <div class="check-circle">✓</div>
+              <div class="check-circle"><i class="fa-solid fa-check"></i></div>
               <p>{{ reason }}</p>
             </div>
           </div>
@@ -78,7 +78,7 @@
             <h3>Top Universities</h3>
             <ul class="univ-list">
               <li v-for="(univ, index) in country.universities" :key="index">
-                <span class="bullet">🎓</span>
+                <span class="bullet"><i class="fa-solid fa-graduation-cap"></i></span>
                 {{ univ }}
               </li>
             </ul>

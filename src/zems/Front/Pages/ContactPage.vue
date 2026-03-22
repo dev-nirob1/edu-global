@@ -19,7 +19,7 @@
           <p class="mb-4 text-muted">Whether you're curious about university admissions, visa processing, or our premium services, we're here to help.</p>
           
           <div class="info-block">
-            <div class="icon-circle">📍</div>
+            <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <h4>Our Headquarters</h4>
               <p>123 Global Education Blvd, Suite 400<br>New York, NY 10001, USA</p>
@@ -27,7 +27,7 @@
           </div>
           
           <div class="info-block">
-            <div class="icon-circle">📞</div>
+            <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
             <div>
               <h4>Phone Number</h4>
               <p>+1 (555) 123-4567<br>Mon-Fri, 9am - 6pm (EST)</p>
@@ -35,7 +35,7 @@
           </div>
           
           <div class="info-block">
-            <div class="icon-circle">✉️</div>
+            <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <h4>Email Address</h4>
               <p>admissions@eduglobal.com<br>support@eduglobal.com</p>
@@ -46,10 +46,10 @@
           <div class="social-links">
             <h4>Follow Us</h4>
             <div class="social-icons">
-              <a href="#" class="social-icon">FB</a>
-              <a href="#" class="social-icon">IG</a>
-              <a href="#" class="social-icon">IN</a>
-              <a href="#" class="social-icon">TW</a>
+              <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
           </div>
         </div>
