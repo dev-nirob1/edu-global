@@ -7,7 +7,7 @@
       <div class="container hero-content">
         <h1 class="country-title">Study in {{ country.name }}</h1>
         <p class="country-subtitle">{{ country.tagline }}</p>
-        <button class="btn btn-accent btn-large mt-4">Apply Now</button>
+        <router-link to="/contact" class="btn btn-accent btn-large mt-4">Apply Now</router-link>
       </div>
     </div>
 

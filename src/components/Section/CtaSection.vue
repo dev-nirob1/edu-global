@@ -5,15 +5,20 @@
         <!-- Abstract Background Shapes -->
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
-        
+
         <div class="cta-content">
           <h2 class="cta-title">Ready to Start Your Global Journey?</h2>
           <p class="cta-subtitle">
-            Join thousands of successful students. Get expert guidance on university selection, applications, and visas.
+            Join thousands of successful students. Get expert guidance on university selection,
+            applications, and visas.
           </p>
           <div class="cta-actions">
-            <router-link to="/contact" class="btn btn-accent btn-large">Get Free Consultation</router-link>
-            <router-link to="/destinations" class="btn btn-outline-light btn-large">Explore Destinations</router-link>
+            <router-link to="/contact" class="btn btn-accent btn-large"
+              >Get Free Consultation</router-link
+            >
+            <router-link to="/destinations" class="btn btn-outline-light btn-large"
+              >Explore Destinations</router-link
+            >
           </div>
         </div>
       </div>
@@ -23,7 +28,7 @@
 
 <style scoped>
 .cta-section {
-  padding: var(--spacing-2xl) 0;
+  padding-bottom: var(--spacing-2xl);
   background-color: var(--bg-surface);
 }
 
@@ -120,15 +125,15 @@
   .cta-box {
     padding: 5rem 3rem;
   }
-  
+
   .cta-title {
     font-size: 3rem;
   }
-  
+
   .cta-actions {
     flex-direction: row;
   }
-  
+
   .btn-large {
     width: auto;
   }

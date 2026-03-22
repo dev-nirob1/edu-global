@@ -86,7 +86,9 @@
 
 <style scoped>
 .hero-section {
-  padding: var(--spacing-xl) 0;
+  min-height: 100vh;
+  padding: 4rem 0;
+  height: 100%;
   background-color: var(--bg-surface);
   overflow: hidden;
 }

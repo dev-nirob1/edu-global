@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    
+
     <!-- Decorative background elements to make it premium -->
     <div class="bg-shape shape-left"></div>
     <div class="bg-shape shape-right"></div>
@@ -24,7 +24,7 @@ const stats = [
   { value: '10K+', label: 'Students Placed' },
   { value: '98%', label: 'Visa Success Rate' },
   { value: '120+', label: 'Partner Universities' },
-  { value: '15+', label: 'Global Destinations' }
+  { value: '15+', label: 'Global Destinations' },
 ]
 </script>
 
@@ -32,13 +32,14 @@ const stats = [
 .stats-section {
   position: relative;
   background-color: var(--color-primary);
-  padding: 4rem 0;
+  padding: 5rem 0;
+  margin-top: 3rem;
   overflow: hidden;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 3rem;
   position: relative;
   z-index: 2;
@@ -49,7 +50,7 @@ const stats = [
 .bg-shape {
   position: absolute;
   border-radius: var(--border-radius-full);
-  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 1;
 }
 

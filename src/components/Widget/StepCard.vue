@@ -3,7 +3,7 @@ defineProps({
   number: String,
   icon: String,
   title: String,
-  description: String
+  description: String,
 })
 </script>
 
@@ -24,7 +24,10 @@ defineProps({
   border-radius: var(--border-radius-lg);
   padding: 2.5rem 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   overflow: hidden;
   z-index: 1;
 }
@@ -63,14 +66,18 @@ defineProps({
   align-items: center;
   justify-content: center;
   background-color: var(--color-primary-light);
+  color: var(--color-primary);
   border-radius: var(--border-radius-full);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .step-card:hover .step-icon {
   transform: scale(1.1) rotate(5deg);
   background-color: var(--color-primary);
+  color: var(--bg-surface);
 }
 
 .step-title {

@@ -8,16 +8,16 @@
 
       <!-- Desktop Menu -->
       <nav class="desktop-nav">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/destinations" class="nav-link">Destinations</router-link>
-        <router-link to="/services" class="nav-link">Services</router-link>
-        <router-link to="/about" class="nav-link">About Us</router-link>
-        <router-link to="/contact" class="nav-link">Contact</router-link>
+        <router-link to="/" class="nav-link" exact-active-class="active">Home</router-link>
+        <router-link to="/destinations" class="nav-link" active-class="active">Destinations</router-link>
+        <router-link to="/services" class="nav-link" active-class="active">Services</router-link>
+        <router-link to="/about" class="nav-link" active-class="active">About Us</router-link>
+        <router-link to="/contact" class="nav-link" active-class="active">Contact</router-link>
       </nav>
 
       <!-- CTA Button (Desktop) -->
       <div class="nav-actions">
-        <router-link to="/apply" class="btn btn-accent">Apply Now</router-link>
+        <router-link to="/contact" class="btn btn-accent">Apply Now</router-link>
       </div>
 
       <!-- Mobile Menu Toggle -->
@@ -29,12 +29,12 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" :class="{ 'is-open': isMenuOpen }">
       <nav class="mobile-nav">
-        <router-link to="/" class="mobile-link" @click="closeMenu">Home</router-link>
-        <router-link to="/destinations" class="mobile-link" @click="closeMenu">Destinations</router-link>
-        <router-link to="/services" class="mobile-link" @click="closeMenu">Services</router-link>
-        <router-link to="/about" class="mobile-link" @click="closeMenu">About Us</router-link>
-        <router-link to="/contact" class="mobile-link" @click="closeMenu">Contact</router-link>
-        <router-link to="/apply" class="btn btn-accent mobile-cta" @click="closeMenu">Apply Now</router-link>
+        <router-link to="/" class="mobile-link" @click="closeMenu" exact-active-class="active">Home</router-link>
+        <router-link to="/destinations" class="mobile-link" @click="closeMenu" active-class="active">Destinations</router-link>
+        <router-link to="/services" class="mobile-link" @click="closeMenu" active-class="active">Services</router-link>
+        <router-link to="/about" class="mobile-link" @click="closeMenu" active-class="active">About Us</router-link>
+        <router-link to="/contact" class="mobile-link" @click="closeMenu" active-class="active">Contact</router-link>
+        <router-link to="/contact" class="btn btn-accent mobile-cta" @click="closeMenu">Apply Now</router-link>
       </nav>
     </div>
   </header>
@@ -114,7 +114,7 @@ onUnmounted(() => window.removeEventListener('resize', handleResize))
   font-size: 1rem;
 }
 
-.nav-link:hover, .nav-link.router-link-active {
+.nav-link:hover, .nav-link.active {
   color: var(--color-primary);
 }
 
@@ -130,7 +130,7 @@ onUnmounted(() => window.removeEventListener('resize', handleResize))
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after, .nav-link.router-link-active::after {
+.nav-link:hover::after, .nav-link.active::after {
   width: 100%;
 }
 
@@ -208,7 +208,7 @@ onUnmounted(() => window.removeEventListener('resize', handleResize))
   transition: color 0.2s ease;
 }
 
-.mobile-link:hover, .mobile-link.router-link-active {
+.mobile-link:hover, .mobile-link.active {
   color: var(--color-primary);
 }
 

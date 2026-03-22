@@ -1,13 +1,13 @@
 <template>
   <section class="testimonials-section">
     <div class="container">
-      <SectionHeader
-        title="Student"
-        highlight="Success Stories"
-        subtitle="Don't just take our word for it. Hear from the thousands of students who have embarked on their global journey with us."
-        buttonText="Read More Stories"
-        buttonLink="/reviews"
-      />
+      <div class="header-center">
+        <SectionHeader
+          title="Student"
+          highlight="Success Stories"
+          subtitle="Don't just take our word for it. Hear from the thousands of students who have embarked on their global journey with us."
+        />
+      </div>
 
       <div class="carousel-wrapper">
         <Carousel v-bind="carouselConfig">
@@ -18,6 +18,7 @@
                 :university="testimonial.university"
                 :review="testimonial.review"
                 :rating="testimonial.rating"
+                :avatarUrl="testimonial.avatarUrl"
                 :initials="testimonial.initials"
               />
             </div>
@@ -45,6 +46,8 @@ const testimonials = ref([
     id: 1,
     name: 'Sarah Rahman',
     initials: 'SR',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop',
     university: 'University of Toronto, Canada',
     rating: 5,
     review:
@@ -54,6 +57,8 @@ const testimonials = ref([
     id: 2,
     name: 'Kevin Smith',
     initials: 'KS',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop',
     university: 'Oxford University, UK',
     rating: 5,
     review:
@@ -63,6 +68,8 @@ const testimonials = ref([
     id: 3,
     name: 'Aisha Khan',
     initials: 'AK',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop',
     university: 'University of Melbourne, AUS',
     rating: 4,
     review:
@@ -72,6 +79,8 @@ const testimonials = ref([
     id: 4,
     name: 'David Chen',
     initials: 'DC',
+    avatarUrl:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop',
     university: 'MIT, USA',
     rating: 5,
     review:
@@ -79,17 +88,21 @@ const testimonials = ref([
   },
 ])
 
-// Carousel settings
+// Carousel settings optimized for 2-column display
 const carouselConfig = {
   itemsToShow: 1,
   wrapAround: true,
-  gap: 20,
+  snapAlign: 'center',
   breakpoints: {
+    // 768px and up
     768: {
       itemsToShow: 2,
+      snapAlign: 'start',
     },
+    // 1024px and up
     1024: {
-      itemsToShow: 3,
+      itemsToShow: 2,
+      snapAlign: 'start',
     },
   },
 }
@@ -98,7 +111,14 @@ const carouselConfig = {
 <style scoped>
 .testimonials-section {
   padding: var(--spacing-2xl) 0;
-  background-color: var(--bg-surface); /* Kept white for contrast against DestinationsSection */
+  background-color: var(--bg-surface);
+}
+.header-center :deep(.section-header) {
+  align-items: center;
+}
+.header-center :deep(.header-text) {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .carousel-wrapper {
@@ -108,8 +128,20 @@ const carouselConfig = {
 .carousel__item {
   height: 100%;
   width: 100%;
-  padding: 10px; /* Prevents box-shadow clipping */
+  padding: 10px;
   text-align: left;
+}
+
+/* Ensure slides stretch to equal heights */
+:deep(.carousel__track) {
+  margin-bottom: 2rem;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+:deep(.carousel__slide) {
+  align-items: stretch !important;
+  display: flex !important;
 }
 
 /* Customizing vue3-carousel controls */
@@ -139,14 +171,5 @@ const carouselConfig = {
 :deep(.carousel__pagination-button--active::after) {
   background-color: var(--color-primary);
   transform: scale(1.5);
-}
-
-:deep(.carousel__track) {
-  margin-bottom: 2rem;
-  align-items: stretch; /* Make all cards same height */
-}
-
-:deep(.carousel__slide) {
-  align-items: stretch;
 }
 </style>
