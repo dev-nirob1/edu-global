@@ -82,13 +82,15 @@
                 {{ univ }}
               </li>
             </ul>
-            <router-link to="/contact" class="btn btn-outline w-100 mt-4">Start Admissions Process</router-link>
+            <router-link to="/contact" class="btn btn-outline w-100 mt-4"
+              >Start Admissions Process</router-link
+            >
           </div>
         </aside>
       </div>
     </div>
   </div>
-  
+
   <div v-else class="container not-found">
     <h2>Destination Not Found</h2>
     <p>We couldn't find details for the country you selected.</p>
@@ -114,64 +116,115 @@ const countriesData = {
       'Home to Oxford, Cambridge, and prestigious Russel Group universities.',
       'Benefit from a full 2-year Post-Study Work Visa after graduation.',
       'Shorter degree programs (3-year undergrad, 1-year master’s) save time and money.',
-      'A massive multicultural hub providing excellent European networking opportunities.'
+      'A massive multicultural hub providing excellent European networking opportunities.',
     ],
-    visaInfo: 'The UK Student Visa (Tier 4) allows you to live and study in the UK. You can also legally work up to 20 hours a week during term time to support your life abroad.',
-    universities: ['University of Oxford', 'University of Cambridge', 'Imperial College London', 'UCL', 'University of Edinburgh', 'King’s College London']
+    visaInfo:
+      'The UK Student Visa (Tier 4) allows you to live and study in the UK. You can also legally work up to 20 hours a week during term time to support your life abroad.',
+    universities: [
+      'University of Oxford',
+      'University of Cambridge',
+      'Imperial College London',
+      'UCL',
+      'University of Edinburgh',
+      'King’s College London',
+    ],
   },
   usa: {
     name: 'the USA',
-    tagline: 'The global epicenter of technology, innovation, and diverse educational opportunities.',
+    tagline:
+      'The global epicenter of technology, innovation, and diverse educational opportunities.',
     heroImage: '/dest-usa.png',
-    facts: { capital: 'Washington D.C.', currency: 'USD ($)', language: 'English', intake: 'Fall / Spring' },
+    facts: {
+      capital: 'Washington D.C.',
+      currency: 'USD ($)',
+      language: 'English',
+      intake: 'Fall / Spring',
+    },
     reasons: [
       'Dominated by Ivy League excellence and world-leading cutting edge research facilities.',
       'Highly flexible education system allowing you to change majors easily.',
       'STEM-focused OPT allows up to 3 years of highly lucrative post-graduation work.',
-      'Massive campus life culture with incredible extracurriculars.'
+      'Massive campus life culture with incredible extracurriculars.',
     ],
-    visaInfo: 'The F-1 Student Visa is the most common for international students. You will need an I-20 form from your accepted university before applying.',
-    universities: ['MIT', 'Stanford University', 'Harvard University', 'Caltech', 'University of Chicago', 'Princeton University']
+    visaInfo:
+      'The F-1 Student Visa is the most common for international students. You will need an I-20 form from your accepted university before applying.',
+    universities: [
+      'MIT',
+      'Stanford University',
+      'Harvard University',
+      'Caltech',
+      'University of Chicago',
+      'Princeton University',
+    ],
   },
   canada: {
     name: 'Canada',
-    tagline: 'A welcoming, safe, and highly affordable destination with clear pathways to permanent residency.',
+    tagline:
+      'A welcoming, safe, and highly affordable destination with clear pathways to permanent residency.',
     heroImage: '/dest-canada.png',
-    facts: { capital: 'Ottawa', currency: 'CAD ($)', language: 'English / French', intake: 'Sep / Jan / May' },
+    facts: {
+      capital: 'Ottawa',
+      currency: 'CAD ($)',
+      language: 'English / French',
+      intake: 'Sep / Jan / May',
+    },
     reasons: [
       'Extremely high quality of life and routinely ranked among the safest countries globally.',
       'Affordable tuition fees compared directly to the US and UK.',
       'Post-Graduation Work Permit (PGWP) provides an easy pathway to Permanent Residency (PR).',
-      'A welcoming and incredibly diverse immigrant-friendly society.'
+      'A welcoming and incredibly diverse immigrant-friendly society.',
     ],
-    visaInfo: 'To study in Canada, you need a Study Permit. This permit also allows you to work part-time on or off-campus while pursuing your full-time degree.',
-    universities: ['University of Toronto', 'McGill University', 'UBC', 'University of Waterloo', 'University of Alberta']
+    visaInfo:
+      'To study in Canada, you need a Study Permit. This permit also allows you to work part-time on or off-campus while pursuing your full-time degree.',
+    universities: [
+      'University of Toronto',
+      'McGill University',
+      'UBC',
+      'University of Waterloo',
+      'University of Alberta',
+    ],
   },
   australia: {
     name: 'Australia',
-    tagline: 'World-renowned institutions paired with a breathtaking lifestyle and excellent work rights.',
+    tagline:
+      'World-renowned institutions paired with a breathtaking lifestyle and excellent work rights.',
     heroImage: '/dest-australia.png',
     facts: { capital: 'Canberra', currency: 'AUD ($)', language: 'English', intake: 'Feb / July' },
     reasons: [
       'Incredible weather, beautiful beaches, and a highly relaxed lifestyle.',
       'Top-tier universities forming the prestigious globally-ranked Group of Eight (Go8).',
       'Generous post-study work rights lasting up to 4 full years.',
-      'High minimum wage for part-time student jobs to effectively support living costs.'
+      'High minimum wage for part-time student jobs to effectively support living costs.',
     ],
-    visaInfo: 'The Subclass 500 Student Visa covers your stay. Australia has a very streamlined online visa application process compared to other regions.',
-    universities: ['University of Melbourne', 'University of Sydney', 'UNSW, Sydney', 'ANU', 'Monash University', 'University of Queensland']
-  }
+    visaInfo:
+      'The Subclass 500 Student Visa covers your stay. Australia has a very streamlined online visa application process compared to other regions.',
+    universities: [
+      'University of Melbourne',
+      'University of Sydney',
+      'UNSW, Sydney',
+      'ANU',
+      'Monash University',
+      'University of Queensland',
+    ],
+  },
 }
 
 // Fallback logic for countries not in mock data but clicked from the list
 const defaultData = {
   name: countryId ? countryId.charAt(0).toUpperCase() + countryId.slice(1) : 'Global Destination',
   tagline: 'Advance your career by studying at world-renowned institutions.',
-  heroImage: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
+  heroImage:
+    'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
   facts: { capital: 'N/A', currency: 'Local', language: 'English / Local', intake: 'Varies' },
-  reasons: ['World-class regional ranking', 'Great post-study employment opportunities', 'Vibrant international student life', 'Access to top industry networks'],
-  visaInfo: 'Standard international student visa processing applies. Consult with our expert team for detailed requirements.',
-  universities: ['Premier Regional University', 'Institute of Technology', 'State University']
+  reasons: [
+    'World-class regional ranking',
+    'Great post-study employment opportunities',
+    'Vibrant international student life',
+    'Access to top industry networks',
+  ],
+  visaInfo:
+    'Standard international student visa processing applies. Consult with our expert team for detailed requirements.',
+  universities: ['Premier Regional University', 'Institute of Technology', 'State University'],
 }
 
 const country = computed(() => countriesData[countryId] || defaultData)
@@ -213,16 +266,16 @@ const country = computed(() => countriesData[countryId] || defaultData)
   z-index: 2;
   color: var(--text-light);
   max-width: 800px;
-  padding: 0 1rem;
 }
 
 .country-title {
   font-family: var(--font-heading);
+  color: var(--bg-surface);
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -1px;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-transform: capitalize;
 }
 
@@ -243,22 +296,28 @@ const country = computed(() => countriesData[countryId] || defaultData)
 .quick-facts {
   background-color: var(--color-primary);
   color: var(--text-light);
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   box-shadow: var(--shadow-md);
   position: relative;
   z-index: 3;
   margin-top: -40px;
   border-radius: var(--border-radius-lg);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1140px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .quick-facts {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .facts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 0 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
 }
 
 .fact-item {
@@ -298,7 +357,8 @@ const country = computed(() => countriesData[countryId] || defaultData)
 
 /* Main Content Area */
 .content-area {
-  padding: var(--spacing-xl) 0 var(--spacing-2xl) 0;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-2xl);
 }
 
 .layout-grid {
@@ -328,7 +388,9 @@ const country = computed(() => countriesData[countryId] || defaultData)
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .reason-card:hover {
@@ -447,11 +509,11 @@ const country = computed(() => countriesData[countryId] || defaultData)
   .dest-hero {
     height: 550px;
   }
-  
+
   .country-title {
     font-size: 4.5rem;
   }
-  
+
   .facts-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -461,7 +523,7 @@ const country = computed(() => countriesData[countryId] || defaultData)
   .layout-grid {
     grid-template-columns: 2fr 1fr;
   }
-  
+
   .reasons-list {
     grid-template-columns: repeat(2, 1fr);
   }
