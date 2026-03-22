@@ -21,6 +21,5 @@ import TeamSection from '@/components/About/TeamSection.vue'
 .about-page {
   background-color: var(--bg-offset);
   min-height: 100vh;
-  padding-bottom: var(--spacing-2xl);
 }
 </style>

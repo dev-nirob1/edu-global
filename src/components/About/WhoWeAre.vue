@@ -5,10 +5,14 @@
         <div class="story-content">
           <h2 class="section-title">Breaking Borders Since 2015</h2>
           <p class="story-text">
-            EduGlobal began with a single mission: to remove the stress and confusion from the international university admissions process. We believed that bright minds shouldn't be held back by complex bureaucracies.
+            EduGlobal began with a single mission: to remove the stress and confusion from the
+            international university admissions process. We believed that bright minds shouldn't be
+            held back by complex bureaucracies.
           </p>
           <p class="story-text">
-            Today, we are a premier education consultancy guiding students to dream institutions worldwide. Our ethos is built on full transparency, student-first counseling, and an unwavering commitment to your future.
+            Today, we are a premier education consultancy guiding students to dream institutions
+            worldwide. Our ethos is built on full transparency, student-first counseling, and an
+            unwavering commitment to your future.
           </p>
 
           <div class="story-highlights">
@@ -34,7 +38,7 @@
             class="story-image"
           />
           <div class="floating-badge">
-            <i class="fa-solid fa-star badge-icon" style="color: var(--color-secondary);"></i>
+            <i class="fa-solid fa-star badge-icon" style="color: var(--color-secondary)"></i>
             <div>
               <strong>Top Rated</strong>
               <p>By 500+ Students</p>
@@ -49,14 +53,14 @@
 <style scoped>
 /* Who We Are Section */
 .who-we-are {
-  padding: var(--spacing-2xl) 0;
+  padding: 5rem 0;
   background-color: var(--bg-offset);
 }
 
 .story-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -154,9 +158,15 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 1024px) {

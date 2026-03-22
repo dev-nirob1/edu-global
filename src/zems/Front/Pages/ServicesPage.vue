@@ -11,7 +11,6 @@
           />
         </div>
         <div class="service-content-col">
-          <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <h2 class="service-title">University Admissions</h2>
           <p class="service-desc">
             Navigating global university applications can be overwhelming. Our seasoned admission
@@ -38,7 +37,6 @@
           />
         </div>
         <div class="service-content-col">
-          <div class="service-icon"><i class="fa-solid fa-earth-americas"></i></div>
           <h2 class="service-title">Visa Guidance & Processing</h2>
           <p class="service-desc">
             A single mistake can derail your study abroad dream. Our dedicated visa specialists are
@@ -48,7 +46,9 @@
           <ul class="service-features">
             <li><i class="fa-solid fa-check check-icon"></i> Complex Document Preparation</li>
             <li><i class="fa-solid fa-check check-icon"></i> Financial File Assessment</li>
-            <li><i class="fa-solid fa-check check-icon"></i> Confidence-Building Mock Interviews</li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Confidence-Building Mock Interviews
+            </li>
             <li><i class="fa-solid fa-check check-icon"></i> Embassy Appointment Scheduling</li>
           </ul>
         </div>
@@ -63,13 +63,16 @@
           />
         </div>
         <div class="service-content-col">
-          <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
           <h2 class="service-title">Scholarship Assistance</h2>
           <p class="service-desc">
-            Quality education should be accessible. Our financial advisors are experts at identifying and securing partial to fully-funded international scholarships, grants, and university-specific bursaries to drastically reduce your tuition burden.
+            Quality education should be accessible. Our financial advisors are experts at
+            identifying and securing partial to fully-funded international scholarships, grants, and
+            university-specific bursaries to drastically reduce your tuition burden.
           </p>
           <ul class="service-features">
-            <li><i class="fa-solid fa-check check-icon"></i> Global Scholarship Database Matching</li>
+            <li>
+              <i class="fa-solid fa-check check-icon"></i> Global Scholarship Database Matching
+            </li>
             <li><i class="fa-solid fa-check check-icon"></i> Grant Application Storytelling</li>
             <li><i class="fa-solid fa-check check-icon"></i> Financial Aid Negotiation</li>
             <li><i class="fa-solid fa-check check-icon"></i> Corporate Sponsorship Guidance</li>
@@ -87,10 +90,11 @@
           />
         </div>
         <div class="service-content-col">
-          <div class="service-icon"><i class="fa-solid fa-plane-departure"></i></div>
           <h2 class="service-title">Pre-Departure & Accommodation</h2>
           <p class="service-desc">
-            Your journey doesn't end with a visa. We provide comprehensive pre-departure briefings covering cultural adjustments, packing essentials, and banking. Additionally, we help secure safe and comfortable student housing near your chosen campus.
+            Your journey doesn't end with a visa. We provide comprehensive pre-departure briefings
+            covering cultural adjustments, packing essentials, and banking. Additionally, we help
+            secure safe and comfortable student housing near your chosen campus.
           </p>
           <ul class="service-features">
             <li><i class="fa-solid fa-check check-icon"></i> On-Campus & Off-Campus Housing</li>
@@ -108,7 +112,7 @@
 .services-page {
   background-color: var(--bg-surface);
   min-height: 100vh;
-  padding: 8rem 0 var(--spacing-2xl); /* 8rem top padding since there's no hero banner */
+  padding: 6rem 0 var(--spacing-2xl); /* 8rem top padding since there's no hero banner */
 }
 
 .services-container {
@@ -120,7 +124,7 @@
 .service-row {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -134,25 +138,13 @@
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius-md);
   display: block;
-}
-
-.service-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  padding: 1rem;
-  background-color: var(--bg-offset);
-  border-radius: var(--border-radius-full);
-  line-height: 1;
-  box-shadow: var(--shadow-sm);
 }
 
 .service-title {
   font-family: var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 1.5rem;
@@ -160,10 +152,10 @@
 }
 
 .service-desc {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .service-features {
@@ -182,18 +174,12 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-main);
-  padding: 1rem;
+  padding: 0.75rem;
   background-color: var(--bg-offset);
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--border-color);
   transition: transform 0.3s ease;
   box-shadow: var(--shadow-sm);
-}
-
-.service-features li:hover {
-  transform: translateX(10px);
-  border-color: var(--color-primary);
-  background-color: var(--bg-surface);
 }
 
 .check-icon {
@@ -207,7 +193,7 @@
 @media (min-width: 1024px) {
   .service-row {
     flex-direction: row;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .reverse-row {
@@ -215,7 +201,7 @@
   }
 
   .service-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 </style>

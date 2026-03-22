@@ -46,7 +46,7 @@
 
 <style scoped>
 .ceo-section {
-  padding: var(--spacing-2xl) 0;
+  padding: 5rem 0;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
@@ -55,7 +55,7 @@
 .ceo-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -141,7 +141,7 @@
 @media (min-width: 1024px) {
   .ceo-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    gap: 4rem;
   }
   .experience-badge {
     bottom: 3rem;

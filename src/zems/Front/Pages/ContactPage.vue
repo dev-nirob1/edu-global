@@ -2,8 +2,8 @@
   <div class="contact-page">
     <div class="page-header">
       <div class="container header-center">
-        <SectionHeader 
-          title="Get in" 
+        <SectionHeader
+          title="Get in"
           highlight="Touch"
           subtitle="We would love to hear from you. Our expert counselors are ready to answer all your questions."
           isPageTitle
@@ -16,29 +16,32 @@
         <!-- Contact Info (Left) -->
         <div class="contact-info">
           <h2>Contact Information</h2>
-          <p class="mb-4 text-muted">Whether you're curious about university admissions, visa processing, or our premium services, we're here to help.</p>
-          
+          <p class="mb-4 text-muted">
+            Whether you're curious about university admissions, visa processing, or our premium
+            services, we're here to help.
+          </p>
+
           <div class="info-block">
             <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <h4>Our Headquarters</h4>
-              <p>123 Global Education Blvd, Suite 400<br>New York, NY 10001, USA</p>
+              <p>123 Global Education Blvd, Suite 400<br />New York, NY 10001, USA</p>
             </div>
           </div>
-          
+
           <div class="info-block">
             <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
             <div>
               <h4>Phone Number</h4>
-              <p>+1 (555) 123-4567<br>Mon-Fri, 9am - 6pm (EST)</p>
+              <p>+1 (555) 123-4567<br />Mon-Fri, 9am - 6pm (EST)</p>
             </div>
           </div>
-          
+
           <div class="info-block">
             <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <h4>Email Address</h4>
-              <p>admissions@eduglobal.com<br>support@eduglobal.com</p>
+              <p>admissions@eduglobal.com<br />support@eduglobal.com</p>
             </div>
           </div>
 
@@ -46,10 +49,18 @@
           <div class="social-links">
             <h4>Follow Us</h4>
             <div class="social-icons">
-              <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-icon" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -61,18 +72,36 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" v-model="form.firstName" required placeholder="John" />
+                <input
+                  type="text"
+                  id="firstName"
+                  v-model="form.firstName"
+                  required
+                  placeholder="John"
+                />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" v-model="form.lastName" required placeholder="Doe" />
+                <input
+                  type="text"
+                  id="lastName"
+                  v-model="form.lastName"
+                  required
+                  placeholder="Doe"
+                />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" v-model="form.email" required placeholder="john@example.com" />
+                <input
+                  type="email"
+                  id="email"
+                  v-model="form.email"
+                  required
+                  placeholder="john@example.com"
+                />
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number</label>
@@ -93,7 +122,13 @@
 
             <div class="form-group">
               <label for="message">Your Message</label>
-              <textarea id="message" v-model="form.message" rows="5" required placeholder="How can we help you?"></textarea>
+              <textarea
+                id="message"
+                v-model="form.message"
+                rows="5"
+                required
+                placeholder="How can we help you?"
+              ></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-submit" :disabled="isSubmitting">
@@ -111,7 +146,7 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617540700877!2d-73.99646278453303!3d40.74844047932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2592284dc834b%3A0xc38e3e4f71a938c1!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1633538413693!5m2!1sen!2sus"
         width="100%"
         height="450"
-        style="border:0;"
+        style="border: 0"
         allowfullscreen=""
         loading="lazy"
       ></iframe>
@@ -129,7 +164,7 @@ const form = reactive({
   email: '',
   phone: '',
   service: '',
-  message: ''
+  message: '',
 })
 
 const isSubmitting = ref(false)
@@ -140,8 +175,9 @@ const handleSubmit = () => {
   // Mock API Call simulating network delay
   setTimeout(() => {
     isSubmitting.value = false
-    successMsg.value = 'Thank you! Your message has been successfully sent. We will contact you shortly.'
-    
+    successMsg.value =
+      'Thank you! Your message has been successfully sent. We will contact you shortly.'
+
     // Reset form
     form.firstName = ''
     form.lastName = ''
@@ -149,7 +185,7 @@ const handleSubmit = () => {
     form.phone = ''
     form.service = ''
     form.message = ''
-    
+
     // Hide success message after 5 seconds
     setTimeout(() => {
       successMsg.value = ''
@@ -301,9 +337,8 @@ const handleSubmit = () => {
 .card-box {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  padding: 2.5rem;
-  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
 }
 
 .card-box h2 {
@@ -321,7 +356,7 @@ const handleSubmit = () => {
 .form-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .form-group {
@@ -347,7 +382,9 @@ const handleSubmit = () => {
   color: var(--text-main);
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
@@ -386,6 +423,10 @@ const handleSubmit = () => {
 @media (min-width: 768px) {
   .form-row {
     grid-template-columns: 1fr 1fr;
+  }
+  /* Contact Form (Right) */
+  .card-box {
+    padding: 2.5rem;
   }
 }
 
